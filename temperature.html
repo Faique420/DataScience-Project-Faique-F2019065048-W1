@@ -1,0 +1,40 @@
+<style>
+h1{
+color:Blue;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding:10px
+}
+</style>
+
+<html>
+    <body bgcolor=lightgreen>
+
+        <center>
+        <br></br>
+        <h1>Temperature Prediction</h1><br>
+        
+        <form method="POST", action="{{url_for('home')}}">
+           <b> Year :  <input type="text", name='a', placeholder="Enter 1"> <br><br>
+            Month :  <input type="text", name='b', placeholder="Enter 2"> <br><br>
+            <input type="submit" , value='Predict !' >
+        </form>
+ <br> 
+                <!---Set placeholder for prediction output--->
+    <br></br>
+<table>
+<tr>
+                 <th>{{ prediction_text }}</th>
+</tr>
+</table>
+
+<br></br>
+<br></br>
+  <img src="tempic.png" alt="Pakistan temperture representation" width="1200px" height="450px">
+
+</center>
+
+    </body>
+</html>
